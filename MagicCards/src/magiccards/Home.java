@@ -6,6 +6,7 @@ package magiccards;
 
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -146,9 +147,11 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-        Registrate registrate = new Registrate();
-        registrate.show();
-        dispose();
+            Registrate registrate = new Registrate();
+            registrate.show();
+            dispose();
+        
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked

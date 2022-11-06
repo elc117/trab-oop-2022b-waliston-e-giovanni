@@ -4,6 +4,8 @@
  */
 package magiccards;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author waliston
@@ -116,9 +118,14 @@ public class Registrate extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+       
+        if(  jTextField1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null,"Insira seu nome!");
+        } else {
         Game game = new Game();
         game.show();
         dispose();
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
