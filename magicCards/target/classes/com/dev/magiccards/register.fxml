@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="600.0" style="-fx-background-color: #084D6E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.magiccards.Register">
+   <children>
+      <TextField fx:id="nome" layoutX="139.0" layoutY="484.0" prefHeight="30.0" prefWidth="306.0" />
+      <Text fill="WHITE" layoutX="211.0" layoutY="463.0" stroke="#790c0c" strokeType="OUTSIDE" strokeWidth="0.0" text="Qual e seu nome?" wrappingWidth="175.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Button layoutX="203.0" layoutY="529.0" mnemonicParsing="false" onAction="#username" prefHeight="30.0" prefWidth="175.0" text="Começar">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Button>
+      <Text fill="#fcfcfc" layoutX="147.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ola, Seja bem-vindo ao">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="150.0" layoutY="143.0" stroke="#a413ae" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" text="Magic Cards">
+         <font>
+            <Font name="System Bold" size="47.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="123.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seu objetivo em MC consiste em ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="88.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entao esteja sempre atento aos nomes e">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="55.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Que podem ser: Objetos, Animais, Comidas etc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="236.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Divirta-se">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="103.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acertas os nomes de diversas coisas">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
