@@ -8,15 +8,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.json.JSONException;
+import java.io.*;
+
 
 public class Register extends Application {
 
+    @FXML
     public TextField nome;
 
     private static Stage stage;
 
-
-    public static Stage getStage(){
+    public static Stage getStage() {
         return stage;
     }
 
@@ -28,26 +31,53 @@ public class Register extends Application {
         stage.setScene(scene);
         stage.show();
         Register.stage = stage;
+
+
     }
 
     @FXML
-    private void username(ActionEvent event) {
+    private void username(ActionEvent event) throws JSONException, IOException {
+
+
         event.consume();
-        if(nome.getText().isEmpty()) {
+        if (nome.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Campo Vazio");
-            alert.setHeaderText("Parece que houve um erro");
+            alert.setHeaderText("");
             alert.setContentText("O campo nome, não pode estar vazio");
-
             alert.showAndWait();
+
         } else {
             try {
                 new Game().start(new Stage());
-                Register.getStage().close();
+                Register.getStage().hide();
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

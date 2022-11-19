@@ -4,12 +4,22 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Fim extends Application {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Fim extends Application implements Initializable {
 
     private static Stage stage;
+    public Text nameField;
+    public Text pointsField;
+
+
+    @FXML
 
     public static Stage getStage() {
         return stage;
@@ -23,6 +33,7 @@ public class Fim extends Application {
         stage.setScene(scene);
         stage.show();
         Fim.stage = stage;
+
     }
 
     @FXML
@@ -47,5 +58,15 @@ public class Fim extends Application {
         }
     }
 
-    //TODO - metodo referente a pontuação final
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            Game game = new Game();
+            pointsField.setText(String.valueOf(game.getPontos()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

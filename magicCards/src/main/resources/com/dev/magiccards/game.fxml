@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="600.0" style="-fx-background-color: #084D6E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.magiccards.Game">
     <children>
-        <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 100px; -fx-background-color: yellow;" text="D">
+        <Button layoutX="14.0" layoutY="29.0"  mnemonicParsing="false" prefHeight="48.0" prefWidth="52.0" style="-fx-background-radius: 100px; -fx-background-color: rgb(244,238,129)" text="Dica" fx:id="dica" onAction="#umaDica">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
@@ -20,26 +20,27 @@
                 <Font size="20.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="528.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+        <Text fx:id="points" fill="WHITE" layoutX="528.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
             <font>
                 <Font size="19.0" />
             </font>
         </Text>
-        <Button layoutX="373.0" layoutY="513.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="83.0" text="OK" onAction="#conferePalavra">
+        <Button layoutX="373.0" layoutY="513.0" mnemonicParsing="false" onAction="#conferePalavra" prefHeight="48.0" prefWidth="83.0" style="-fx-background-radius: 10px;" text="OK">
 
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Button>
-        <TextField layoutX="153.0" layoutY="513.0" prefHeight="48.0" prefWidth="210.0" fx:id="palavra"/>
-      <ImageView fitHeight="292.0" fitWidth="358.0" layoutX="121.0" layoutY="166.0" pickOnBounds="true">
-         <image>
-            <Image url="@images/abacaxi.jpg" />
-         </image></ImageView>
-      <Text fill="WHITE" layoutX="137.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o que está na imagem!" >
+        <TextField fx:id="palavra" layoutX="153.0" layoutY="513.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-radius: 10px; -fx-font-size: 21px;" />
+      <Text fill="WHITE" layoutX="90.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o que está na imagem!">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Text>
+      <Pane layoutX="146.0" layoutY="163.0" prefHeight="327.0" prefWidth="306.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" />
+      <ImageView fx:id="imageView" fitHeight="292.0" fitWidth="273.0" layoutX="164.0" layoutY="181.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/abacaxi.jpg" />
+         </image></ImageView>
     </children>
 </Pane>
