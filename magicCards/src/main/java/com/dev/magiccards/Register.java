@@ -8,8 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.json.JSONException;
-import java.io.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 
 public class Register extends Application {
@@ -36,21 +37,30 @@ public class Register extends Application {
     }
 
     @FXML
-    private void username(ActionEvent event) throws JSONException, IOException {
+    private void username(ActionEvent event) {
 
 
         event.consume();
         if (nome.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Campo Vazio");
-            alert.setHeaderText("");
             alert.setContentText("O campo nome, não pode estar vazio");
             alert.showAndWait();
 
         } else {
             try {
                 new Game().start(new Stage());
-                Register.getStage().hide();
+                Register.getStage().close();
+
+                //JDBC
+                Connection conexao = ConnectionFactory.createConnection();
+
+                String sql = "INSERT INTO Jogador ( nome  ) " + " VALUES ('" + this.nome.getText() + " ')";
+
+                PreparedStatement comando = conexao.prepareStatement(sql);
+
+                comando.execute();
+                conexao.close();
 
             } catch (Exception e) {
                 e.printStackTrace();

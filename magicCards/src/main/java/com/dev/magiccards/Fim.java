@@ -1,6 +1,8 @@
 package com.dev.magiccards;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,14 +12,18 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
-public class Fim extends Application implements Initializable {
+public class Fim extends Application {
 
     private static Stage stage;
-    public Text nameField;
-    public Text pointsField;
-
+    @FXML
+    private Text nameField;
+    @FXML
+    private Text pointsField;
 
     @FXML
 
@@ -33,7 +39,7 @@ public class Fim extends Application implements Initializable {
         stage.setScene(scene);
         stage.show();
         Fim.stage = stage;
-
+        defs();
     }
 
     @FXML
@@ -58,15 +64,23 @@ public class Fim extends Application implements Initializable {
         }
     }
 
+    String nom;
+    int testeq;
 
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    private void defs() {
         try {
-            Game game = new Game();
-            pointsField.setText(String.valueOf(game.getPontos()));
+
+            Connection conexao = ConnectionFactory.createConnection();
+            String sql = "select nome from Jogador where id = 1;";
+            PreparedStatement comando = conexao.prepareStatement(sql);
+            ResultSet resultado = comando.executeQuery();
+            resultado.getString("nome");
+            conexao.close();
+            nameField.setText(resultado.toString());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 }
