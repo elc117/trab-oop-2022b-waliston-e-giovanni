@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #084D6E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.magiccards.Fim">
+   <children>
+      <Text fill="WHITE" layoutX="137.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parabéns, ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="110.0" layoutY="459.0" mnemonicParsing="false" onAction="#goHomeMenu" prefHeight="52.0" prefWidth="163.0" style="-fx-background-radius: 10px;" text="Voltar ao menu">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="333.0" layoutY="459.0" mnemonicParsing="false" onAction="#playAgain" prefHeight="52.0" prefWidth="163.0" style="-fx-background-radius: 10px;" text="Jogar novamente">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="352.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="64.28271484375" fx:id="pointsField">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="192.0" fitWidth="150.0" layoutX="450.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/crw.png" />
+         </image>
+      </ImageView>
+      <Text fill="#e1e1e1" layoutX="286.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" fx:id="nameField">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="131.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sua pontuaçao foi:" >
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
